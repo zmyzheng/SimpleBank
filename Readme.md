@@ -5,3 +5,9 @@ brew install golang-migrate
 migrate create -ext sql -dir db/migration -seq init_schema
 migrate -path db/migration -database "postgresql://root:secret@UbuntuServer:5432/simple_bank?sslmode=disable" -verbose up
 
+
+
+brew install sqlc
+
+sqlc init  
+make sqlc
